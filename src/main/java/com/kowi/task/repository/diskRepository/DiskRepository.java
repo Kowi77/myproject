@@ -7,4 +7,6 @@ import java.util.List;
 public interface DiskRepository {
 
     List<Disk> getAll();
+
+    Disk get(int id);
 }

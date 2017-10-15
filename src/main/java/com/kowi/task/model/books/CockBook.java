@@ -14,11 +14,11 @@ public class CockBook extends Book {
         this.ingridient = ingridient;
     }
 
-    public String getIngrids() {
+    public String getIngridient() {
         return ingridient;
     }
 
-    public void setIngrids(String ingridient) {
+    public void setIngridient(String ingridient) {
         this.ingridient = ingridient;
     }
 }

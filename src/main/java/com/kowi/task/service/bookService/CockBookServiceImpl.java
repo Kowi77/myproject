@@ -10,17 +10,15 @@ import java.util.List;
 @Service
 public class CockBookServiceImpl implements BookService {
 
-    private CockBookRepositoryImpl repository;
-
     @Autowired
-    public CockBookServiceImpl(CockBookRepositoryImpl repository) {
-        this.repository = repository;
-    }
+    private CockBookRepositoryImpl repository;
 
     @Override
     public List<CockBook> getAll() {
         return repository.getAll();
     }
+
+    public CockBook get(int id) {return repository.get(id);}
 }
 
 

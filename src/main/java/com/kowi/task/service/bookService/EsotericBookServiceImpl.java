@@ -23,4 +23,6 @@ public class EsotericBookServiceImpl implements BookService {
     public List<EsotericBook> getAll() {
         return repository.getAll();
     }
+
+    public EsotericBook get(int id) {return repository.get(id);}
 }

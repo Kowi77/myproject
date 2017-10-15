@@ -8,4 +8,6 @@ interface BookService {
 
     List<? extends Book> getAll();
 
+    Book get(int id);
+
   }

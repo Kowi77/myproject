@@ -8,4 +8,6 @@ public interface BookRepository {
 
     List<? extends Book> getAll();
 
+    Book get(int id);
+
 }

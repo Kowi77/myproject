@@ -21,4 +21,6 @@ public class ProgramBookServiceImpl implements BookService {
     public List<ProgramBook> getAll() {
         return repository.getAll();
     }
+
+    public ProgramBook get(int id) {return repository.get(id);}
 }

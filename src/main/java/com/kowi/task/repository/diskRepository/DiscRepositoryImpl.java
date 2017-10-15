@@ -14,4 +14,9 @@ public class DiscRepositoryImpl implements DiskRepository {
     public List<Disk> getAll() {
        return DISKS;
     }
+
+    @Override
+    public Disk get(int id) {
+        return DISKS.stream().filter(b -> b.getId() == id).findFirst().get();
+    }
 }

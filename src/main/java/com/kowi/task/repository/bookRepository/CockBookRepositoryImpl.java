@@ -12,4 +12,8 @@ public class CockBookRepositoryImpl implements BookRepository {
     public List<CockBook> getAll() {
         return COCK_BOOKS;
     }
+
+    public CockBook get (int id){
+        return COCK_BOOKS.stream().filter(b -> b.getId() == id).findFirst().get();
+    }
 }

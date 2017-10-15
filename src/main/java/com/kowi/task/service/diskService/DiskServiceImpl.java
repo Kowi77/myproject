@@ -20,4 +20,6 @@ public class DiskServiceImpl implements DiskService{
     public List<Disk> getAll() {
         return repository.getAll();
     }
+
+    public Disk get(int id) {return repository.get(id);}
 }

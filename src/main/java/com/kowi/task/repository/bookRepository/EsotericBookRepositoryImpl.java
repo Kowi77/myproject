@@ -1,5 +1,6 @@
 package com.kowi.task.repository.bookRepository;
 
+import com.kowi.task.model.books.Book;
 import com.kowi.task.model.books.EsotericBook;
 import org.springframework.stereotype.Repository;
 
@@ -12,4 +13,9 @@ public class EsotericBookRepositoryImpl implements BookRepository {
 
     @Override
     public List<EsotericBook> getAll(){ return ESOTERIC_BOOKS; }
+
+    @Override
+    public EsotericBook get(int id) {
+        return ESOTERIC_BOOKS.stream().filter(b -> b.getId() == id).findFirst().get();
+    }
 }
