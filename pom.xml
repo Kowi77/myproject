@@ -4,9 +4,9 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.example</groupId>
+    <groupId>com.kowi</groupId>
     <artifactId>myproject</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0-RELEASE</version>
     <packaging>war</packaging>
 
     <build>
@@ -24,20 +24,7 @@
                     <target>1.8</target>
                 </configuration>
             </plugin>
-        <!--    <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-jar-plugin</artifactId>
-                <configuration>
-                    <archive>
-                        <manifest>
-                            <addClasspath>true</addClasspath>
-                            <mainClass>com.kowi.task.InitConfig</mainClass>
-                        </manifest>
-                    </archive>
-                </configuration>
-            </plugin>-->
         </plugins>
-
     </build>
 
     <properties>
