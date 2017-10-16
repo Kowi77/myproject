@@ -32,7 +32,4 @@ public class ProductData {
     public static final Disk DISK_2 =new Disk(8,"Great hits", 234.3, "131723923459", CD, MUSIC);
     public static final Disk DISK_3 =new Disk(9,"Best films", 543.65, "398756093", DVD, VIDEO);
     public static final List<Disk> DISKS = Arrays.asList(DISK_1, DISK_2, DISK_3);
-
-    public static final String[] CATEGORIES = new String[]{"Книги по кулинарии", "Книги по программированию", "Книги по эзотерике", "Диски"};
-
 }

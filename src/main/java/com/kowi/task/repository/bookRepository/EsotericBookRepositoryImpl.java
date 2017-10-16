@@ -1,6 +1,5 @@
 package com.kowi.task.repository.bookRepository;
 
-import com.kowi.task.model.books.Book;
 import com.kowi.task.model.books.EsotericBook;
 import org.springframework.stereotype.Repository;
 
