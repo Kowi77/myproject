@@ -1,13 +1,3 @@
-/*var $dropdowns = $('.dropdown');
-$dropdowns.click(function() {
-    if ( $(this).hasClass('active') ){
-        $(this).toggleClass('active');
-    } else {
-        $dropdowns.removeClass('active');
-        $(this).toggleClass('active');
-    }
-});*/
-
 /*Ajax GET method for one product*/
 
 function getProduct(url) {
@@ -15,7 +5,23 @@ function getProduct(url) {
     $("#frame").append("<h2>Параметры товара: </h2> <br/>");
     $.get(url, function (data) {
         $.each(data, function (key, value) {
+            if (key == "price")
+                value = value + " руб."
             $("#frame").append("<p id='" + key + "'>" + message[key] + value + "</p><br/>");
+        });
+    });
+}
+
+/* Ajax GET method for category's list*/
+
+function getProducts(url) {
+    $("#frame").html("");
+    $("#products").html("");
+    $("#products").append("<h2>" + message[url] + "</h2> <br/>");
+    $.get(url, function (data) {
+        data.forEach(function (entry) {
+            console.log("<a onclick=getProduct(" + url + "/" + entry.id + ")>")
+            $("#products").append("<a onclick=getProduct('" + url + "/" + entry.id + "')>" + entry.name + " (" + entry.price + " руб.)</a><br/>");
         });
     });
 }
@@ -32,6 +38,11 @@ message["minAge"] = "Минимальный возраст: ";
 message["ingridient"] = "Основной ингридиент: ";
 message["type"] = "Тип диска: ";
 message["content"] = "Содержимое диска: ";
+message["cockbook"] = "Книги по кулинарии:";
+message["programbook"] = "Книги по программированию:";
+message["esotericbook"] = "Книги по эзотерике:";
+message["cddisk"] = "CD диски:";
+message["dvddisk"] = "DVD диски:";
 
 
 

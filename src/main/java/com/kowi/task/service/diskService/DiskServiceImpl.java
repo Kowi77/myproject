@@ -22,4 +22,14 @@ public class DiskServiceImpl implements DiskService{
     }
 
     public Disk get(int id) {return repository.get(id);}
+
+    @Override
+    public List<Disk> getAllCd() {
+        return repository.getAllCd();
+    }
+
+    @Override
+    public List<Disk> getAllDvd() {
+        return repository.getAllDvd();
+    }
 }

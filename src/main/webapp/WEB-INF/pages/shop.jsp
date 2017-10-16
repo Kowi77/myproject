@@ -16,49 +16,24 @@
 <body>
 
 <div id="header" class="container-fluid col-lg-12">
-    <h1><a href="#">Mega Shop</a></h1>
+    <h1><a href="/">Mega Shop</a></h1>
 </div>
 
-
-<%--Product's category--%>
 <div class="jumbotron">
-    <div class="container-fluid col-lg-3">
+    <%--Product's category--%>
+    <div class="container-fluid col-lg-2 text-center">
         <div class="sidebar">
             <ul class="nav">
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                         <i class="fa fa-group"></i>
-                        <span class="menu-title">Книги по кулинарии</span>
+                        <span class="menu-title">Книги</span>
                         <i class="fa fa-angle-down"></i>
                     </a>
                     <ul class="dropdown-menu">
-                        <c:forEach items="${cockBooks}" var="cockBook">
-                            <li><a onclick="getProduct('cockbook/' + ${cockBook.getId()})"> <span>${cockBook.getName()} ${cockBook.getPrice()} руб</span></a> </li>
-                        </c:forEach>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        <i class="fa fa-group"></i>
-                        <span class="menu-title">Книги по программированию</span>
-                        <i class="fa fa-angle-down"></i>
-                    </a>
-                    <ul class="dropdown-menu">
-                        <c:forEach items="${programBooks}" var="programBook">
-                            <li><a onclick="getProduct('programbook/' + ${programBook.getId()})"> <span>${programBook.getName()} ${programBook.getPrice()} руб</span></a> </li>
-                        </c:forEach>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        <i class="fa fa-group"></i>
-                        <span class="menu-title">Книги по эзотерике</span>
-                        <i class="fa fa-angle-down"></i>
-                    </a>
-                    <ul class="dropdown-menu">
-                        <c:forEach items="${esotericBooks}" var="esotericBook">
-                            <li><a onclick="getProduct('esotericbook/' + ${esotericBook.getId()})"><span>${esotericBook.getName()} ${esotericBook.getPrice()} руб</span></a> </li>
-                        </c:forEach>
+                        <li><a onclick="getProducts('cockbook')"> <span>Книги по кулинарии</span></a> </li>
+                        <li><a onclick="getProducts('programbook')"> <span>Книги по программированию</span></a> </li>
+                        <li><a onclick="getProducts('esotericbook')"> <span>Книги по эзотерике</span></a> </li>
                     </ul>
                 </li>
                 <li class="dropdown">
@@ -68,17 +43,23 @@
                         <i class="fa fa-angle-down"></i>
                     </a>
                     <ul class="dropdown-menu">
-                        <c:forEach items="${disks}" var="disk">
-                            <li><a onclick="getProduct('disk/' + ${disk.getId()})"><span>${disk.getName()} ${disk.getPrice()} руб</span></a> </li>
-                        </c:forEach>
+                            <li><a onclick="getProducts('cddisk')"><span>CD диски</span></a> </li>
+                            <li><a onclick="getProducts('dvddisk')"><span>DVD диски</span></a> </li>
                     </ul>
                 </li>
 
             </ul>
         </div>
     </div>
-    <div id="frame" class="container-fluid col-lg-9 text-center" >
+
+   <%--Categories list--%>
+    <div id="products" class="container-fluid col-lg-4 text-left" >
     </div>
+
+    <%--Product details--%>
+    <div id="frame" class="container-fluid col-lg-6 text-center" >
+    </div>
+
 </div>
 </body>
 </html>

@@ -9,4 +9,9 @@ public interface DiskService {
     List<Disk> getAll();
 
     Disk get(int id);
+
+    List<Disk> getAllCd();
+
+    List<Disk> getAllDvd();
+
 }

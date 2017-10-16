@@ -21,7 +21,7 @@ public class ProductData {
     public static final List<CockBook> COCK_BOOKS = Arrays.asList(COCK_BOOK_1, COCK_BOOK_2);
 
     public static final EsotericBook ESOTERIC_BOOK_1 =new EsotericBook(3,"Пойми необъяснимое", 3.65, "1245623456", 907, 45);
-    public static final EsotericBook ESOTERIC_BOOK_2 =new EsotericBook(4,"Ничего не поймете в этой книге", 88, "392456093486", 4, 3);
+    public static final EsotericBook ESOTERIC_BOOK_2 =new EsotericBook(4,"Непонятная книга", 88, "392456093486", 4, 3);
     public static final List<EsotericBook> ESOTERIC_BOOKS = Arrays.asList(ESOTERIC_BOOK_1, ESOTERIC_BOOK_2);
 
     public static final ProgramBook PROGRAM_BOOK_1 =new ProgramBook(5,"JAVA", 113.05, "3465493876", 556, "Java");
